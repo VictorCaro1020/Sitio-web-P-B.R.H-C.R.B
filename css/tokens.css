@@ -1,0 +1,20 @@
+/* ==========================================================
+   TOKENS DE DISEÑO — única fuente de colores, fuentes y medidas
+   ========================================================== */
+:root {
+  /* Verdes (vegetación, restauración) */
+  --green-50:#f1faf5; --green-100:#dff3e7; --green-200:#bfe6cf;
+  --green-300:#8fd0a8; --green-500:#2a8253; --green-700:#21704a; --green-900:#124230;
+  /* Azules (agua, recursos hídricos) */
+  --blue-50:#eff7fc; --blue-100:#d9ecf8; --blue-200:#b4d9f0;
+  --blue-300:#86bfe3; --blue-500:#1f78ad; --blue-700:#1a5f8e;
+  /* Neutros */
+  --ink:#12303a; --muted:#55707a; --paper:#f7fbfa; --white:#fff;
+  --line:rgba(18,48,58,.12);
+  /* Tipografía */
+  --font-title:"Montserrat", system-ui, sans-serif;
+  --font-text:"Open Sans", system-ui, sans-serif;
+  /* Forma y movimiento */
+  --radius:20px; --shadow:0 18px 45px rgba(26,95,142,.10);
+  --ease:cubic-bezier(.22,.61,.36,1); --header-h:68px;
+}

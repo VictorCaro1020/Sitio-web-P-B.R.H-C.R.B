@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2a8253">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%A7%3C/text%3E%3C/svg%3E">
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+  <title>Bancarrota Hídrica · Contaminación del río Bogotá</title>
+  <meta name="description" content="El río Bogotá tiene agua, pero no se puede usar. Proyecto de Química sobre la bancarrota hídrica, con Matriz de Vester y salida de campo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/vester.css">
+  <link rel="stylesheet" href="css/ciclo-informe.css">
+  <link rel="stylesheet" href="css/campo-podcast.css">
+  <link rel="stylesheet" href="css/equipo-soluciones.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- CABECERA / NAVEGACIÓN -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <img src="assets/img/logo-crb-g1.png" alt="Logo C.R.B-G1">
+        <span><strong>C.R.B-G1</strong><small>Bancarrota Hídrica</small></span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu">Menú</button>
+      <nav class="nav" id="menu" aria-label="Principal">
+        <a href="#equipo">Equipo</a>
+        <a href="#diagnostico">Diagnóstico</a>
+        <a href="#ciclo">Ciclo roto</a>
+        <a href="#informe">Informe</a>
+        <a href="#campo">Campo</a>
+        <a href="#soluciones">Soluciones</a>
+        <a href="#podcast">Podcast</a>
+        <a href="#descargas">Descargas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- 1. HERO -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <span class="eyebrow">Proyecto de Química · Grado 1001</span>
+          <h1>Bancarrota <span>Hídrica</span></h1>
+          <p class="hero-sub">Río Bogotá: tiene agua, pero ya no se puede usar</p>
+          <p class="hero-text">Durante décadas hemos “gastado” el capital natural del río con vertimientos domésticos e industriales. Explora cómo la Matriz de Vester revela qué causa la crisis y qué la sufre.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#diagnostico">Explorar el diagnóstico</a>
+            <a class="btn btn-ghost" href="#informe">Leer el informe</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong data-count="13">13</strong><span>problemáticas analizadas</span></div>
+            <div class="stat"><strong data-count="380">380</strong><span>km de recorrido del río</span></div>
+            <div class="stat"><strong data-count="23000000">23.000.000</strong><span>coliformes por 100 ml (límite: 200)</span></div>
+            <div class="stat"><strong data-count="143">143</strong><span>mg/l de DBO₅, sin oxígeno para la vida</span></div>
+          </div>
+        </div>
+        <div class="hero-logo reveal"><img src="assets/img/logo-crb-g1.png" alt="Logo del proyecto: río contaminado, fábrica y árbol seco"></div>
+      </div>
+      <svg class="waves" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
+        <path class="w1" d="M0 40 C240 0 480 70 720 35 S1200 5 1440 40 V70 H0Z"/>
+        <path d="M0 52 C300 20 600 72 900 48 S1300 30 1440 52 V70 H0Z"/>
+      </svg>
+    </section>
+
+    <section class="section" id="equipo">
+      <div class="container">
+        <div class="section-head reveal"><span class="kicker">Equipo</span><h2>Nuestro equipo</h2><p>Cuatro integrantes, un mismo objetivo: entender y ayudar a recuperar el río Bogotá.</p></div>
+        <div class="equipo reveal" id="equipo-app" role="region" aria-roledescription="carrusel" aria-label="Nuestro equipo" tabindex="0">
+          <div class="eq-stage" id="eq-stage"></div>
+          <div class="eq-ctrl"><button id="eq-prev" aria-label="Anterior">←</button><div class="eq-dots" id="eq-dots"></div><button id="eq-next" aria-label="Siguiente">→</button></div>
+          <p class="sr-only" id="eq-live" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. DIAGNÓSTICO (se construye en el paso 3) -->
+    <section class="section" id="diagnostico">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">01 · Diagnóstico</span>
+          <h2>Qué causa la crisis y qué la sufre</h2>
+          <p>Trece problemáticas relacionadas con la Matriz de Vester: una crítica, cinco activas, tres pasivas y cuatro indiferentes.</p>
+        </div>
+        <div class="vester reveal" id="vester">
+          <div class="resumen" id="resumen"></div>
+          <div class="tabs" role="tablist" aria-label="Vistas del diagnóstico">
+            <button role="tab" id="t-matriz" aria-selected="true" aria-controls="v-matriz">Matriz</button>
+            <button role="tab" id="t-cuad" aria-selected="false" aria-controls="v-cuad">Cuadrantes</button>
+            <button role="tab" id="t-arbol" aria-selected="false" aria-controls="v-arbol">Árbol de problemas</button>
+          </div>
+          <div role="tabpanel" id="v-matriz" aria-labelledby="t-matriz">
+            <p class="hint">Cada fila influye sobre las columnas (0 = sin relación, 3 = fuerte). Toca una fila para ver su detalle; toca una tarjeta de arriba para filtrar por tipo.</p>
+            <div class="scroll"><table id="tabla"></table></div>
+          </div>
+          <div role="tabpanel" id="v-cuad" aria-labelledby="t-cuad" hidden><div id="grafico"></div></div>
+          <div role="tabpanel" id="v-arbol" aria-labelledby="t-arbol" hidden><div class="arbol" id="arbol"></div></div>
+          <aside class="detalle" id="detalle" aria-live="polite"></aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CICLO HIDROLÓGICO ROTO (paso 4) -->
+    <section class="section" id="ciclo">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">02 · Ciclo hidrológico</span>
+          <h2>El eslabón roto del agua</h2>
+          <p>El río conserva su cauce y su caudal, pero el ciclo natural se rompe en el punto de los vertimientos.</p>
+        </div>
+        <div class="ciclo reveal" id="ciclo-app">
+          <div class="ciclo-img"><img src="assets/img/ciclo-hidrologico.jpg" width="1600" height="873" alt="Esquema del ciclo hidrológico alterado del río Bogotá: precipitación, uso del agua, vertimiento, colapso e infiltración"><div class="spot" id="spot"></div></div>
+          <div class="ciclo-nav" id="ciclo-nav" role="tablist" aria-label="Etapas del ciclo"></div>
+          <article class="ciclo-card" id="ciclo-card" aria-live="polite"></article>
+          <div class="ciclo-ctrl"><button class="btn btn-ghost" id="prev">← Anterior</button><button class="btn btn-primary" id="next">Siguiente →</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. INFORME Y TEXTO ARGUMENTATIVO (paso 4) -->
+    <section class="section" id="informe">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">03 · Investigación</span>
+          <h2>Informe y texto argumentativo</h2>
+          <p>Tesis, hechos, argumentos y conclusiones, con acceso a la infografía en Canva.</p>
+        </div>
+        <div class="informe reveal" id="informe-app">
+          <div class="stats light">
+            <div class="stat"><strong data-count="4">4</strong><span>tramos del río, de agua viva a alcantarilla</span></div>
+            <div class="stat"><strong data-count="15">15</strong><span>máxima influencia (P1, aguas domésticas)</span></div>
+            <div class="stat"><strong data-count="22">22</strong><span>máxima dependencia (P13, quiebra hídrica)</span></div>
+            <div class="stat"><strong data-count="1">1</strong><span>problemática crítica (P6, anoxia)</span></div>
+          </div>
+          <div class="tabs" role="tablist" aria-label="Lectura del informe">
+            <button role="tab" id="i-t1" aria-selected="true" aria-controls="i-tesis">Tesis</button>
+            <button role="tab" id="i-t2" aria-selected="false" aria-controls="i-hechos">Hechos</button>
+            <button role="tab" id="i-t3" aria-selected="false" aria-controls="i-args">Argumentos</button>
+            <button role="tab" id="i-t4" aria-selected="false" aria-controls="i-concl">Conclusión</button>
+          </div>
+          <div role="tabpanel" id="i-tesis" aria-labelledby="i-t1">
+            <p class="tesis">El río Bogotá atraviesa una quiebra hídrica causada por décadas de vertimientos domésticos e industriales: una amenaza crítica para el agua potable y los ecosistemas de Bogotá y Colombia.</p>
+            <p>El río y sus ecosistemas asociados (humedales, aguas subterráneas y afluentes) funcionan como una cuenta bancaria: proveen agua, regulan el clima local, mitigan inundaciones y albergan especies nativas como el pez capitán y la guapucha. Al contaminarlo hemos “gastado” ese capital hasta la bancarrota: el río conserva su cauce y su caudal, pero su agua es inutilizable por la pérdida de oxígeno disuelto y la acumulación de metales pesados.</p>
+          </div>
+          <div role="tabpanel" id="i-hechos" aria-labelledby="i-t2" hidden>
+            <p>El río no nace contaminado: adquiere el problema a lo largo de su recorrido de más de 380 km.</p>
+            <div class="tramos">
+              <div class="tramo t1"><b>Nacimiento → Villapinzón</b><span>Agua potable, rica en propiedades naturales y llena de vida.</span></div>
+              <div class="tramo t2"><b>Villapinzón → Juan Amarillo</b><span>La contaminación crece por curtiembres y aguas negras; las especies se reducen.</span></div>
+              <div class="tramo t3"><b>Juan Amarillo → Tocaima</b><span>El punto más crítico: sin vida acuática, una alcantarilla abierta.</span></div>
+              <div class="tramo t4"><b>Tocaima → Magdalena</b><span>Sigue extremadamente contaminado, pero mejora poco a poco por aireación natural.</span></div>
+            </div>
+            <p>La Matriz de Vester muestra el origen: los vertimientos domésticos (influencia 15), los industriales (14), los afluentes Juan Amarillo, Fucha y Tunjuelo (12) y las curtiembres de Villapinzón (8). El resultado: hasta 23 millones de coliformes fecales por 100 ml (límite seguro: 200) y oxígeno disuelto cercano a cero en algunos tramos.</p>
+          </div>
+          <div role="tabpanel" id="i-args" aria-labelledby="i-t3" hidden>
+            <details open><summary>1 · La anoxia: donde el río se asfixia</summary>
+              <p>El agotamiento del oxígeno (P6) es la única problemática crítica: dependencia 14 e influencia 8, es resultado y causa a la vez. Con una DBO₅ de 143 mg/l, las bacterias consumen todo el oxígeno al descomponer los desechos. La pérdida de autodepuración (P8, dependencia 16) indica que el río ya no puede limpiarse solo, y los metales pesados de los sedimentos permanecerán décadas.</p></details>
+            <details><summary>2 · Quiebra hídrica: tener el agua y no poder usarla</summary>
+              <p>El calentamiento global aumenta las sequías, y el río, tan contaminado, no sirve como fuente de emergencia. La quiebra hídrica (P13) tiene la dependencia más alta (22) y una influencia de 0: no causa nada, es la gran consecuencia final de todo el sistema.</p></details>
+            <details><summary>3 · Ecosistemas que no vuelven</summary>
+              <p>Especies nativas como el capitán y la guapucha desaparecen (P10, dependencia 13) y los humedales se pierden por urbanización descontrolada, lo que quita a la cuenca uno de sus filtros naturales. Recuperarlos tomará décadas y algunos nunca volverán.</p></details>
+          </div>
+          <div role="tabpanel" id="i-concl" aria-labelledby="i-t4" hidden>
+            <p>Aún es posible actuar. Las problemáticas activas (vertimientos domésticos e industriales, curtiembres de Villapinzón y afluentes contaminados) son las que más influyen sobre el resto del sistema y ofrecen el mayor margen de intervención.</p>
+            <p><strong>Si el Estado, la industria y la ciudadanía no actúan de forma urgente y coordinada sobre estas causas raíz, el río pasará de una crisis a una catástrofe ambiental sin retorno.</strong></p>
+          </div>
+          <div class="info-extra">
+            <div><h3>Infografía del proyecto</h3><div class="infografia" tabindex="0" aria-label="Infografía, desplázate para leerla"><img src="assets/img/infografia.jpg" loading="lazy" alt="Infografía Bancarrota Hídrica: capital natural, ciclo roto, Matriz de Vester, Árbol de Problemas y conclusiones"></div>
+              <p style="margin-top:12px"><a class="btn btn-primary" href="https://canva.link/2s5xk5usm2ue2y4" target="_blank" rel="noopener">Abrir en Canva</a></p></div>
+            <details class="refs"><summary>Fuentes consultadas</summary><ul>
+              <li>Ambientalia (2021). Así se ve el río Bogotá desde el aire. <a href="https://www.ambientalia.com.co/asi-se-ve-rio-bogota-desde-aire-aguas-cristalinas-negras-espumosas/" target="_blank" rel="noopener">enlace</a></li>
+              <li>Banco de la República (2022). Riesgos y amenazas del río Bogotá. <a href="https://enciclopedia.banrepcultural.org/index.php?title=Riesgos_y_amenazas_del_río_Bogotá" target="_blank" rel="noopener">enlace</a></li>
+              <li>CAR (2014). Gestión integral de la cuenca del río Bogotá.</li>
+              <li>Güiza, Londoño y Rodríguez (2015). La judicialización de los conflictos ambientales. Rev. Int. de Contaminación Ambiental, 31(2).</li>
+              <li>ONU Agua (2022). Informe Mundial sobre el Desarrollo de los Recursos Hídricos. <a href="https://www.unwater.org/publications/un-world-water-development-report-2022/" target="_blank" rel="noopener">enlace</a></li>
+              <li>Revista IDS (2025). Contaminación fluvial del río Bogotá. <a href="https://revistas.iudigital.edu.co/index.php/ids/article/view/180" target="_blank" rel="noopener">enlace</a></li>
+              <li>Vargas (2024). Problemática macro ambiental del río Bogotá. <a href="https://ciencialatina.org/index.php/cienciala/article/view/13401" target="_blank" rel="noopener">enlace</a></li></ul></details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. REGISTRO DE CAMPO (paso 5) -->
+    <section class="section" id="campo">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">04 · Registro de campo</span>
+          <h2>Salida al río Bogotá, sector Bilbao</h2>
+          <p>Tres puntos de observación: Fondaje, Hatillo del río y las huertas de Bilbao.</p>
+        </div>
+        <div class="campo reveal" id="campo-app"></div>
+      </div>
+    </section>
+
+    <!-- SOLUCIONES -->
+    <section class="section" id="soluciones">
+      <div class="container">
+        <div class="section-head reveal"><span class="kicker">Propuestas</span><h2>Soluciones</h2></div>
+        <div class="sol-texto reveal">
+          <p>Después de analizar a profundidad la problemática, sus causas, sus consecuencias y demás aspectos, mi equipo propone algunas posibles soluciones para la recuperación de la bancarrota hídrica, enfocadas en el río Bogotá.</p>
+          <p>Según la Matriz de Vester, el problema más crítico es el P6 (“Agotamiento del oxígeno disuelto (anoxia)”), que está causado por el P7 (“DBO5 elevada (alta demanda bioquímica de oxígeno)”). A su vez, el P7 es alimentado por las problemáticas activas: P1 (vertimiento de aguas residuales domésticas), P2 (vertimientos industriales), P3 (curtiembres de Villapinzón) y P4 (afluentes tributarios como el Juan Amarillo, el Fucha y el Tunjuelo). Por eso, las soluciones deben actuar sobre estas problemáticas activas y no solo sobre sus efectos.</p>
+        </div>
+        <div class="cadena reveal" id="cadena" aria-label="Cadena causal: P1, P2, P3 y P4 alimentan a P7, que causa P6"></div>
+        <p class="cadena-nota">El número de cada etiqueta es la fuerza de la relación en la matriz (0 a 3).</p>
+        <div class="sol-texto reveal"><p>La DBO5 es elevada por la gran cantidad de materia orgánica presente en el agua, que proviene de estos vertimientos y, en general, del mal uso del río. Esa materia alimenta a enormes cantidades de bacterias que, al descomponerla, consumen el oxígeno disuelto y dejan el agua sin el oxígeno que necesita la vida acuática.</p></div>
+        <div class="sol-grid">
+          <article class="sol-card reveal"><span class="tipo">Propuesta principal</span><h3>Educación en cultura social</h3>
+            <p>Esta propuesta actúa sobre el P1, porque el comportamiento de las personas influye directamente en los vertimientos domésticos. Si las personas recibieran educación en cultura social y apropiación de estos recursos naturales, dejarían de contaminar el río, empezarían a generar ideas y contribuirían a su recuperación. Con ello se reduciría la materia orgánica que llega al río y, en consecuencia, la DBO5 y la anoxia.</p></article>
+          <article class="sol-card comp reveal"><span class="tipo">Propuesta complementaria</span><h3>Mayor presupuesto del Gobierno</h3>
+            <p>La educación sola no alcanza para resolver las problemáticas P2, P3 y P4, que dependen más de control y vigilancia que del comportamiento ciudadano. Por eso proponemos que el Gobierno aumente el presupuesto destinado a implementar ideas y proyectos para la recuperación del río, y que una parte se dirija a:</p>
+            <ul><li>Reforzar el control y las sanciones a los vertimientos industriales (P2) y a las curtiembres de Villapinzón (P3).</li><li>Vigilar y reducir la contaminación que llevan los afluentes tributarios (P4).</li><li>Financiación de los programas de educación de la propuesta principal.</li></ul></article>
+        </div>
+        <p class="sol-cierre reveal">Así, las dos propuestas se complementan: la educación cambia el comportamiento y el presupuesto da los recursos para controlar a quienes más contaminan.</p>
+      </div>
+    </section>
+
+    <!-- 6. PODCAST (paso 5) -->
+    <section class="section" id="podcast">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">05 · Podcast</span>
+          <h2>Escucha nuestro podcast</h2>
+          <p>El proyecto contado por el equipo, en un solo episodio.</p>
+        </div>
+        <div class="reveal" id="podcast-app"></div>
+      </div>
+    </section>
+
+    <!-- DESCARGAS -->
+    <section class="section" id="descargas">
+      <div class="container">
+        <div class="section-head reveal"><span class="kicker">Archivos</span><h2>Descargas</h2><p>Los documentos originales del proyecto, tal como se entregaron.</p></div>
+        <div class="descargas reveal">
+          <a class="dl" href="assets/descargas/Matriz-De-Vester_Bancarrota-Hidrica.xlsx" download><span class="dl-ico">XLSX</span><span><strong>Matriz de Vester</strong><small>Excel con las 13 problemáticas · 71 KB</small></span><b>Descargar</b></a>
+          <a class="dl" href="assets/descargas/Texto-Argumentativo_Bancarrota-Hidrica.docx" download><span class="dl-ico">DOCX</span><span><strong>Texto argumentativo</strong><small>Documento de Word · 14 KB</small></span><b>Descargar</b></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Proyecto</h3>
+        <p>Bancarrota Hídrica · Contaminación del río Bogotá</p>
+        <p>Colegio Gerardo Molina Ramírez · Grado 1001</p>
+        <p>Proyecto interdisciplinar: Química, Español, Inglés y Física.</p>
+      </div>
+      <div>
+        <h3>Navegación</h3>
+        <a href="#diagnostico">Diagnóstico</a><a href="#ciclo">Ciclo roto</a><a href="#informe">Informe</a><a href="#campo">Campo</a><a href="#soluciones">Soluciones</a><a href="#podcast">Podcast</a><a href="#descargas">Descargas</a>
+      </div>
+      <div>
+        <h3>Recursos</h3>
+        <a href="https://canva.link/2s5xk5usm2ue2y4" target="_blank" rel="noopener">Infografía en Canva</a>
+        <a href="assets/descargas/Matriz-De-Vester_Bancarrota-Hidrica.xlsx" download>Matriz de Vester (Excel)</a>
+        <a href="assets/descargas/Texto-Argumentativo_Bancarrota-Hidrica.docx" download>Texto argumentativo (Word)</a>
+        <a href="#inicio">Volver arriba</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">Proyecto escolar con fines educativos.</div>
+  </footer>
+
+  <script src="data/vester.js" defer></script>
+  <script src="js/vester.js" defer></script>
+  <script src="data/ciclo.js" defer></script>
+  <script src="js/ciclo.js" defer></script>
+  <script src="js/informe.js" defer></script>
+  <script src="data/campo.js" defer></script>
+  <script src="data/podcast.js" defer></script>
+  <script src="js/campo.js" defer></script>
+  <script src="js/podcast.js" defer></script>
+  <script src="data/equipo.js" defer></script>
+  <script src="js/equipo.js" defer></script>
+  <script src="js/soluciones.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

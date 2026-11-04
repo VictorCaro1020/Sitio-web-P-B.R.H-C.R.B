@@ -1,0 +1,37 @@
+/* ==========================================================
+   BASE — reset, tipografía, contenedor y animación de revelado
+   ========================================================== */
+*,*::before,*::after { box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:calc(var(--header-h) + 12px); }
+body {
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--font-text); font-size:1.0625rem; line-height:1.65;
+  overflow-x:hidden;
+}
+img,svg { max-width:100%; display:block; }
+h1,h2,h3 { font-family:var(--font-title); line-height:1.15; margin:0 0 .5em; }
+p { margin:0 0 1em; }
+a { color:var(--blue-700); }
+.container { width:min(1120px, calc(100% - 40px)); margin-inline:auto; }
+
+/* Accesibilidad */
+.skip-link { position:absolute; left:-999px; top:8px; background:var(--white); padding:8px 14px; border-radius:8px; z-index:100; }
+.skip-link:focus { left:8px; }
+:focus-visible { outline:3px solid var(--blue-500); outline-offset:3px; border-radius:6px; }
+
+/* Revelado progresivo: JS añade .is-visible al entrar en pantalla */
+.reveal { opacity:0; transform:translateY(24px); transition:opacity .7s var(--ease), transform .7s var(--ease); }
+.reveal.is-visible { opacity:1; transform:none; }
+@media (prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+  .reveal { opacity:1; transform:none; transition:none; }
+}
+
+/* ---- Pulido final ---- */
+.sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+.progress { position:fixed; top:0; left:0; right:0; height:3px; z-index:60; transform-origin:0 50%; transform:scaleX(0); background:linear-gradient(90deg,var(--green-300),var(--blue-500)); }
+.punto:focus-visible { outline:none; } .punto:focus-visible circle { stroke:var(--ink); stroke-width:3; }
+@media (prefers-reduced-motion:reduce) {
+  *,*::before,*::after { animation:none !important; transition:none !important; }
+  .progress { display:none; }
+}
