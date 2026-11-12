@@ -7,6 +7,11 @@
 window.PODCAST = {
   episodios: [
     {
+      titulo: 'Tráiler: Un Río, Un Hogar',
+      descripcion: 'Un adelanto de menos de un minuto: 23 millones de coliformes, un ciclo del agua roto y una pregunta que el episodio completo responde.',
+      archivo: 'assets/audio/trailer-bancarrota-hidrica.mp3'
+    },
+    {
       titulo: 'Un Rio, Un Hogar: Bancarrota Hídrica',
       descripcion: 'El equipo cuenta qué se hizo en el proyecto: el diagnóstico del río Bogotá, la Matriz de Vester, la salida de campo y las soluciones propuestas.',
       archivo: 'assets/audio/podcast-bancarrota-hidrica.mp3'
